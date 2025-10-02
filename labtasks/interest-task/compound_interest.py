@@ -18,7 +18,7 @@ def compound_interest(savings: float, interest: float, years: int) -> float:
     """
 
     # -- Error Checks -
-    if savings <= 0:
+    if savings < -1:
         raise ValueError("Savings must be greater than 0.")
     if interest < 0:
         raise ValueError("Interest must be greater than 0.")
