@@ -20,7 +20,7 @@ def generate_synthetic_data(m=2.5, b=1.0, num_points=100, x_range=(0, 10), noise
     return x_values, y_values_noisy, m, b
 
 
-def create_graph(filename="synthetic_data.csv", m=2.5, b=1.0):
+def create_graph(filename="synthetic_data.csv", m=2.5, b=1.0, png_filename="synthetic_data.png"):
     # Read the data from the CSV file
     df = pd.read_csv(filename)
     
@@ -36,6 +36,10 @@ def create_graph(filename="synthetic_data.csv", m=2.5, b=1.0):
     plt.ylabel('Y')
     plt.title('Synthetic Data Plot')
     plt.legend()
+    
+    # Save the plot as a PNG
+    plt.savefig(png_filename, format='png', dpi=300)  # dpi can be adjusted for quality
+    
     plt.show()
 
 # Example usage
