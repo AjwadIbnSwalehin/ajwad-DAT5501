@@ -37,4 +37,6 @@ def calender(days, start_day):
     for row in calender_print:
         print(row)
 
-calender(30, "Monday")
+day = input("What day do you want to start on?")
+days_in_month = input("How many days does the month have?")
+calender(days_in_month, day)
