@@ -36,8 +36,8 @@ for order in orders:
     plt.plot(X_test, y_pred, label=f'Order {order}: MSE = {mse:.2f}')
 
 # Plot the actual data
-plt.scatter(X_train, y_train, color='blue', label='Train Data (First 90 years)')
-plt.scatter(X_test, y_test, color='green', label='Test Data (Last 10 years)')
+plt.plot(X_train, y_train, color='blue', label='Train Data (First 90 years)')
+plt.plot(X_test, y_test, color='green', label='Test Data (Last 10 years)')
 
 plt.xlabel('Year')
 plt.ylabel('Lead Prices')
